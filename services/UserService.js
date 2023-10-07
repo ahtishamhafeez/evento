@@ -4,22 +4,22 @@ require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
 exports.getAllUsers = async (request) => {
-  return await User.find();
+  return User.find();
 };
 
 exports.createUser = async (user) => {
-  return await User.create(user);
+  return User.create(user);
 };
 exports.getUserById = async (id) => {
-  return await User.findById(id);
+  return User.findById(id);
 };
 
 exports.updateUser = async (id, user) => {
-  return await User.findByIdAndUpdate(id, user);
+  return User.findByIdAndUpdate(id, user);
 };
 
 exports.deleteUser = async (id) => {
-  return await User.findByIdAndDelete(id);
+  return User.findByIdAndDelete(id);
 };
 
 exports.loginUser = async (req, res) => {
